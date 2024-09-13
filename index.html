@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Playlist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Playlist section -->
+        <div class="playlist">
+            <h2>Your Playlist</h2>
+            <ul id="track-list">
+                <!-- Tracks will be inserted here -->
+            </ul>
+        </div>
+
+        <!-- Player section -->
+        <div class="player">
+            <!-- Track information -->
+            <div class="track-info">
+                <img src="" id="track-cover" alt="Track Cover">
+                <h3 id="track-title">Select a song</h3>
+            </div>
+
+            <!-- Custom progress bar and time display -->
+            <div class="progress-container">
+                <span id="current-time">0:00</span>
+                <input type="range" id="progress-bar" value="0" min="0" max="100">
+                <span id="total-duration">0:00</span>
+            </div>
+
+            <!-- Controls for playback -->
+            <div class="controls">
+                <button id="prev-btn">⏮️</button>
+                <button id="play-btn">
+                    <svg id="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                    <svg id="pause-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px" style="display: none;">
+                        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                    </svg>
+                </button>
+                <button id="next-btn">⏭️</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
