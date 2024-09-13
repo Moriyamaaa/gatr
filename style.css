@@ -136,8 +136,8 @@ body {
 }
 
 .controls button {
-    background-color: transparent; /* Remove background color */
-    border: 2px solid #1db954; /* Spotify's green */
+    background-color: #1db954; /* Spotify's green */
+    border: none;
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -145,34 +145,31 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
-    color: #1db954; /* Set icon color */
-    font-size: 20px; /* Adjust font size */
+    transition: background-color 0.3s ease;
 }
 
+/* Specific styles for prev and next buttons */
+#prev-btn, #next-btn {
+    background-color: #fff; /* Change to white */
+    color: #000; /* Change text color to black for contrast */
+}
+
+/* Specific styles for play button */
+#play-btn {
+    background-color: #1db954; /* Spotify green */
+}
+
+#play-btn svg {
+    fill: #000; /* Change icon color to black */
+}
+
+/* Hover and active states */
 .controls button:hover {
-    background-color: #1db954; /* Background color on hover */
-    color: white; /* Icon color on hover */
-    border-color: #1db954; /* Border color on hover */
+    background-color: #f0f0f0; /* Light gray for hover effect */
 }
 
 .controls button:active {
     transform: scale(0.95); /* Add a slight pressing effect */
-}
-
-#play-btn svg {
-    fill: currentColor; /* Use button color for play/pause icon */
-    width: 24px;
-    height: 24px;
-}
-
-/* Ensure that only one icon is displayed */
-#play-icon {
-    display: block;
-}
-
-#pause-icon {
-    display: none;
 }
 
 /* Responsive design for small devices (smartphones, portrait) */
